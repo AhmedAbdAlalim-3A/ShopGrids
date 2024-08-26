@@ -1,0 +1,557 @@
+/* ROOT */
+:root{
+
+    /* colors */    
+    --yalow: #fede67;
+    --bg_color: linear-gradient(to right, #2b4134 , #395c46);
+    --green: #1c2d23;
+    --mix_green: #273e34;
+    --top_level_green: #395c46;
+    --gray: #c5c2c9;
+    --mix_gray: #191919;
+    --white: white;
+    --mix_white1: #e9e9e9;
+    --mix_white2: #eeedeb;
+    --black: #070707;
+
+    /* border */
+    --F_border: 1px solid var(--green);
+    --S_border: 1px solid rgba(152, 151, 151, 0.31);
+
+    /* border redus */
+    --_5_px: 5px;
+    --_8_px: 8px;
+    --_20_px: 20px;
+    --_50_px: 50px;
+
+    /* SHADOW */
+    --frist_S: 0px 3px 12px -5px rgba(0, 0, 0, 0.862);
+}
+
+/* FONTS */
+@font-face {
+    font-family: Chennai;
+    src: url(../fonts/Chennai\ Regular.otf);
+  }
+
+
+
+
+/*============= GENERAL =============*/
+body{
+    font-family: Chennai;
+    user-select: none;
+}
+::-webkit-scrollbar { width: 7px; }
+::-webkit-scrollbar-track { background-color: var(--green);}
+::-webkit-scrollbar-thumb { background-color: var(--yalow); border-radius: 3px;}
+::-webkit-scrollbar-thumb:hover { background-color: var(--yalow); border-radius: 3px;}
+
+/*============= NAVIGATION =============*/
+.navbar{
+    background-image: var(--bg_color);
+    width: 100%;
+}
+.navbar-toggler,
+.navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+    border: none; 
+}
+.navbar-toggler span{
+    font-size: 2rem;
+    color: var(--yalow);
+}
+.navbar .nav-link{
+    font-weight: 500;
+    font-size: .9rem;
+    color: var(--mix_white2);
+    opacity: .5;
+}
+.navbar .nav-link.active,
+.navbar .nav-link:hover{
+    font-weight: 680;
+    color: var(--mix_white2);
+    opacity: .8;
+}
+#fer-bar ion-icon{
+    color: var(--green);
+    font-size: 1rem;
+    padding: 4px;
+    cursor: pointer;
+    border: var(--F_border);
+    border-radius: var(--_50_px);
+}
+#fer-bar ion-icon.active,
+#fer-bar ion-icon:hover{
+    background-color: var(--yalow);
+    border: var(--S_border);
+}
+
+
+/*============= HOME =============*/
+.home{
+    background-image: var(--bg_color);
+}
+.home h1,
+.home h2,
+.home h4
+{
+    color: var(--mix_white2);
+}
+.home h2{
+    font-size: 3rem;
+    opacity: .6;
+}
+.home h1{
+    font-size: 6rem;
+}
+.home h4{
+    font-size: 1rem;
+    opacity: .5;
+    letter-spacing: 1px;
+}
+.home a{
+    padding: 7px 15px;
+    font-size: .8rem;
+    font-weight: 550;
+    text-decoration: none;
+    color: var(--black);
+    border-radius: var(--_8_px);
+    background: var(--yalow);
+}
+#carouselExampleControls{
+    background-image: url(../images/crkels.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 100%;
+}
+.home a:hover{
+    background-color: #fedd67e1;
+    color: var(--mix_white1);
+}
+.home button ion-icon{
+    font-size: 2rem;
+    color: var(--mix_white2);
+}
+.home .carousel_buttons,
+.home .carousel_buttons2{
+    position: absolute;
+    z-index: 2;
+    bottom: 16%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.home .carousel_buttons{
+    right: 11%;
+}
+.home .carousel_buttons2{
+    left: 13%;
+}
+.carousel .carousel-indicators li{
+    display: inline-block;
+    width:10px;
+    height:10px;
+    cursor:pointer;
+    border:1px solid #fff;
+    background:#fff;
+    border-radius:50%;
+  }
+
+/*============= brands =============*/
+.brands{
+    background: var(--mix_gray);
+}
+
+
+/*============= collection =============*/
+.collection{
+    background: var(--mix_white1);
+}
+.collection h1{
+    color: var(--green);
+}
+.sho_card{
+    background: var(--yalow);
+    border-radius: var(--_20_px);
+}
+.sho_card .card{
+    background: var(--yalow);
+    border: 0!important;
+    position: relative;
+    overflow: hidden;
+}
+.BG-GRAY{
+    background: var(--gray)!important;
+}
+.sho_card .card img{
+    object-fit: cover;
+    transition: 0.5S ease;
+}
+.sho_card .card img:hover{
+    transform: scale(1.1);
+}
+.sho_card .card  .card-title{
+    font-size: 1.2rem;
+    color: var(--top_level_green);
+}
+.sho_card .card .card-text .btn_sty{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.sho_card .card .card-text a{
+    padding: 7px 15px;
+    font-size: .7rem;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--mix_white2);
+    border-radius: var(--_8_px);
+    background-image: var(--bg_color);
+    box-shadow: var(--frist_S);
+}
+.sho_card .card .card-text a:hover{
+    background: var(--top_level_green);
+    color: var(--mix_white1);
+}
+
+
+/*============= sellers =============*/
+.sellers .card{
+    border: 0!important;
+}
+.hart_col{
+    transition: color 0.3s ease;
+}
+.hart_col .heart-filled {
+    display: none;
+}
+.hart_col:hover .heart-outline {
+    display: none;
+}
+.hart_col:hover .heart-filled {
+    display: inline-block;
+}
+.sellers .card .btn_sty{
+    font-size: 1.7rem;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    height: 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    color: var(--mix_gray);
+    cursor: pointer;
+}
+.sellers .card .img_conta{
+    border-radius: var(--_20_px);
+    background: var(--mix_white2);
+    overflow: hidden;
+}
+.sellers .card .img_conta img{
+    transition: 0.2s ease;
+}
+.sellers .card .img_conta img:hover{
+    transform: scale(1.1);
+}
+.bag_col{
+    transition: color 0.3s ease;
+}
+.bag_col .bag-filled {
+    display: none;
+}
+.bag_col:hover .bag-outline {
+    display: none;
+}
+.bag_col:hover .bag-filled {
+    display: inline-block;
+}
+.bag_col ion-icon{
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    font-size: 1.5rem;
+    color: var(--black);
+    background: var(--yalow);
+    border-radius: var(--_8_px);
+    cursor: pointer;
+}
+.sellers .card .card-title{
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+
+/*============= Our Statistics =============*/
+.statistics {
+    background-image: var(--bg_color);
+}
+.statistics .stat_style{
+    background: var(--mix_white1);
+    border-radius: var(--_8_px);
+    box-shadow: var(--frist_S);
+}
+.statistics .bg-yalow{
+    color: var(--yalow);
+}
+.statistics h1{
+    font-weight: 500;
+    color: var(--m);
+}
+.statistics h3{
+    font-size: 1rem;
+    color: var(--top_level_green);
+}
+
+
+/*============= news =============*/
+.news{
+    background: var(--mix_white1);
+}
+.news .card{
+    border: 0!important;
+    background: none;
+}
+.news .card .btn_sty{
+    font-size: 1.4rem;
+    position: absolute;
+    right: 5%;
+    z-index: 2;
+    top: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    color: var(--mix_gray);
+}
+.news .card .news_date{
+    position: absolute;
+    left: 5%;
+    z-index: 2;
+    top: 4%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+.news .card .news_date h4{
+    font-size: .9rem;
+    padding: .3rem .5rem;
+    background: var(--yalow);
+    border-radius: var(--_5_px);
+}
+.news .card .btn_sty ion-icon{
+    padding: .3rem .3rem;
+    background: var(--white);
+    border-radius: var(--_50_px);
+    cursor: pointer;
+}
+.news .card .btn_sty ion-icon:hover{
+    color: var(--yalow);
+    background-image: var(--bg_color);
+}
+.news .card img{
+    border-radius: var(--_20_px);
+    background: var(--mix_white2);
+}
+.news .card-body h3{
+    font-size: 1rem;
+    font-weight: 580;
+}
+.news .card-body p{
+    font-size: .8rem;
+    font-weight: 0;
+    opacity: .7;
+}
+
+
+/*============= Jumbotron =============*/
+.jumbotron{
+    background: var(--mix_white1)!important;
+}
+.jumbotron h4{
+    font-size: 1.8rem;
+    color: var(--black);
+}
+.jumbotron input{
+    border: 0;
+    outline: 0;
+    background: var(--white);
+    border-radius: var(--_5_px);
+    padding-left: 10px;
+}
+.jumbotron  input::placeholder{
+    opacity: .8;
+}
+.jumbotron  button{
+    border: 0;
+    outline: 0;
+    background: var(--yalow);
+    border-radius: var(--_5_px);
+}
+.jumbotron  button:hover{
+    color: var(--mix_white1);
+}
+
+/*============= frist footer =============*/
+.up_footer{
+    background: var(--mix_gray);
+    color: var(--mix_white1);
+}
+.up_footer i {
+    font-size: 2.1rem;
+    opacity: .9;
+}
+.up_footer p {
+    font-size: .7rem;
+    opacity: .6;
+}
+
+
+/*============= secound footer =============*/
+footer{
+    background: var(--mix_gray);
+    color: var(--mix_white1);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-top: .01rem solid var(--gray);
+}
+footer h1{
+    font-size: 1.2rem;
+}
+footer ul{
+    list-style: none;
+    opacity: .6;
+    font-size: .8rem;
+}
+footer li{
+    margin-top: 5px;
+}
+
+/*============= Socket =============*/
+.socket{
+    font-size: .8rem;
+    background: var(--black);
+    color: var(--mix_white2);
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/*============= scroll top =============*/
+.scroll_top{
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 3;
+}
+.scroll_top ion-icon{
+    font-size: 1.2rem;
+    padding: .2rem .4rem;
+    background: var(--yalow);
+    border-radius: var(--_5_px);
+}
+
+
+/*============= MEDIA QUERIES =============*/
+ @media (max-width: 480px) {
+    /* navbar */
+    .navbar .navbar-nav{
+        border-radius: var(--_5_px);
+    }
+    .navbar .nav-link.active,
+    .navbar .nav-link:hover,
+    .navbar .nav-link{
+        border-radius: var(--_5_px);
+    }
+
+    /* sellers */
+    .sellers .card .btn_sty{
+        font-size: 1.2rem;
+    }
+    .sellers .card .card-title{
+        font-size: 1.1rem;
+    }
+
+    /* jumbotron */
+    .jumbotron h4{
+        font-size: 1.3rem;
+    }
+
+    /* frist footer */
+    .up_footer i {
+        font-size: 1.5rem;
+    }
+    .up_footer p {
+        font-size: .4rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    /* navbar */
+    .navbar .navbar-nav{
+        border-radius: var(--_5_px);
+    }
+    .navbar .nav-link.active,
+    .navbar .nav-link:hover,
+    .navbar .nav-link{
+        border-radius: var(--_5_px);
+    }
+
+    /* collection */
+    .sho_card .card  .card-title{
+        font-size: 1.2rem;
+    }
+
+    /* jumbotron */
+    .jumbotron h4{
+        font-size: 1.4rem;
+    }
+    
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+    /* navbar */
+    .navbar .navbar-nav{
+        border-radius: var(--_5_px);
+    }
+    .navbar .nav-link.active,
+    .navbar .nav-link:hover,
+    .navbar .nav-link{
+        border-radius: var(--_5_px);
+    }
+    .s_n ion-icon{
+        font-size: 2.4rem;
+    }
+    .s_n p{
+        font-size: 1.1rem;
+    }
+    .s_n ul{
+        margin-top: 4.1%;
+        margin-right: 40px;
+    }
+    
+    /* collection */
+    .sho_card .card  .card-title{
+        font-size: 2.1rem;
+    }
+    .sho_card .card .card-text .btn_sty{
+        height: 85%;
+    }
+    .sho_card .card .card-text a{
+        padding: 7px 15px;
+        font-size: 1.3rem;
+    }
+
+    /* jumbotron */
+    .jumbotron h4{
+        font-size: 1.6rem;
+    }
+}
