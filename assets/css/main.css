@@ -170,7 +170,7 @@ body{
     background: var(--mix_white1);
 }
 .collection h1{
-    color: var(--green);
+    color: var(--mix_gray);
 }
 .sho_card{
     background: var(--yalow);
@@ -212,7 +212,7 @@ body{
     text-decoration: none;
     color: var(--mix_white2);
     border-radius: var(--_8_px);
-    background-image: var(--bg_color);
+    background: var(--mix_gray);
     box-shadow: var(--frist_S);
 }
 .sho_card .card .card-text a:hover{
